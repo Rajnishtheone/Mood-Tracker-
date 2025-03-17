@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Mood Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Light/Dark Mode Toggle -->
+        <div class="theme-toggle">
+            <button id="theme-button">🌙 Dark Mode</button>
+        </div>
+
+        <h1>Daily Mood Tracker</h1>
+        <div class="mood-form">
+            <label for="mood-select">How are you feeling today?</label>
+            <select id="mood-select">
+                <option value="happy">😊 Happy</option>
+                <option value="sad">😢 Sad</option>
+                <option value="angry">😠 Angry</option>
+                <option value="neutral">😐 Neutral</option>
+                <option value="excited">🤩 Excited</option>
+            </select>
+            <label for="note">Add a short note (optional):</label>
+            <textarea id="note" rows="3" placeholder="Write a short note..."></textarea>
+            <button id="log-mood">Log Mood</button>
+            <p id="message"></p>
+        </div>
+
+        <!-- Show Mood History Button -->
+        <button id="toggle-history">Show Mood History</button>
+
+        <!-- Mood History Section -->
+        <div class="mood-history" id="mood-history">
+            <h2>Mood History</h2>
+            <table id="mood-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Mood</th>
+                        <th>Note</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
